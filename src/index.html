@@ -5,13 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
 
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&display=swap&subset=latin-ext');
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+    }
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        font-size: 1.4rem;
+    }
+  </style>
+
   <script type="module" src="/build/obedovac-components.esm.js"></script>
   <script nomodule src="/build/obedovac-components.js"></script>
 
 </head>
 <body>
+    <obd-input label="heslo" type="password" value="asd"></obd-input>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <!-- <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> -->
+
+  <div style="width: 500px; margin: 50px 0;">
+    <obd-card card-title="title" card-subtitle="subtitle">
+        test
+        <obd-button type="submit">Prihlásiť</obd-button>
+    </obd-card>
+  </div>
 
 </body>
 </html>

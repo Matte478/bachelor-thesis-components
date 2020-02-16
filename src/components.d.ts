@@ -24,6 +24,18 @@ export namespace Components {
     */
     'middle': string;
   }
+  interface ObdButton {
+    'type': string;
+  }
+  interface ObdCard {
+    'cardSubtitle': string;
+    'cardTitle': string;
+  }
+  interface ObdInput {
+    'label': string;
+    'type': string;
+    'value': string;
+  }
 }
 
 declare global {
@@ -34,8 +46,29 @@ declare global {
     prototype: HTMLMyComponentElement;
     new (): HTMLMyComponentElement;
   };
+
+  interface HTMLObdButtonElement extends Components.ObdButton, HTMLStencilElement {}
+  var HTMLObdButtonElement: {
+    prototype: HTMLObdButtonElement;
+    new (): HTMLObdButtonElement;
+  };
+
+  interface HTMLObdCardElement extends Components.ObdCard, HTMLStencilElement {}
+  var HTMLObdCardElement: {
+    prototype: HTMLObdCardElement;
+    new (): HTMLObdCardElement;
+  };
+
+  interface HTMLObdInputElement extends Components.ObdInput, HTMLStencilElement {}
+  var HTMLObdInputElement: {
+    prototype: HTMLObdInputElement;
+    new (): HTMLObdInputElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'obd-button': HTMLObdButtonElement;
+    'obd-card': HTMLObdCardElement;
+    'obd-input': HTMLObdInputElement;
   }
 }
 
@@ -54,9 +87,25 @@ declare namespace LocalJSX {
     */
     'middle'?: string;
   }
+  interface ObdButton {
+    'type'?: string;
+  }
+  interface ObdCard {
+    'cardSubtitle'?: string;
+    'cardTitle'?: string;
+  }
+  interface ObdInput {
+    'label'?: string;
+    'onValueChange'?: (event: CustomEvent<any>) => void;
+    'type'?: string;
+    'value'?: string;
+  }
 
   interface IntrinsicElements {
     'my-component': MyComponent;
+    'obd-button': ObdButton;
+    'obd-card': ObdCard;
+    'obd-input': ObdInput;
   }
 }
 
@@ -67,6 +116,9 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'obd-button': LocalJSX.ObdButton & JSXBase.HTMLAttributes<HTMLObdButtonElement>;
+      'obd-card': LocalJSX.ObdCard & JSXBase.HTMLAttributes<HTMLObdCardElement>;
+      'obd-input': LocalJSX.ObdInput & JSXBase.HTMLAttributes<HTMLObdInputElement>;
     }
   }
 }
