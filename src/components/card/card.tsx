@@ -14,8 +14,11 @@ export class Card {
         return (
             <div class="card">
                 <header class="card__header">
-                    <p class="card__header_title">{this.cardTitle}</p>
-                    <p class="card__header_subtitle">{this.cardSubtitle}</p>
+                    <div class="card__header_text">
+                        <p class="card__header_title">{this.cardTitle}</p>
+                        <p class="card__header_subtitle">{this.cardSubtitle}</p>
+                    </div>
+                    <slot name="controls" />
                 </header>
                 <div class="card__body">
                     <slot></slot>

@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+@import '../../global/fonts/icofont.scss';
+
 .modal {
     position: relative;
     background-color: $color-white;
@@ -10,7 +12,6 @@
     font-family: $font-family;
 
     &__header {
-        position: relative;
         padding: 30px;
         border-bottom: 1px solid $color-border-light;
 

@@ -25,6 +25,7 @@ export namespace Components {
     'middle': string;
   }
   interface ObdButton {
+    'block': boolean;
     'type': string;
   }
   interface ObdCard {
@@ -33,8 +34,8 @@ export namespace Components {
   }
   interface ObdModal {
     'active': boolean;
-    'cardSubtitle': string;
-    'cardTitle': string;
+    'modalSubtitle': string;
+    'modalTitle': string;
   }
 }
 
@@ -88,6 +89,7 @@ declare namespace LocalJSX {
     'middle'?: string;
   }
   interface ObdButton {
+    'block'?: boolean;
     'type'?: string;
   }
   interface ObdCard {
@@ -95,9 +97,9 @@ declare namespace LocalJSX {
     'cardTitle'?: string;
   }
   interface ObdModal {
-    'active': boolean;
-    'cardSubtitle'?: string;
-    'cardTitle'?: string;
+    'active'?: boolean;
+    'modalSubtitle'?: string;
+    'modalTitle'?: string;
     'onClosed'?: (event: CustomEvent<any>) => void;
   }
 

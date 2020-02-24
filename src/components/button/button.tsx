@@ -9,10 +9,11 @@ import { Component, Prop, h } from '@stencil/core';
 export class Button {
 
     @Prop() type: string;
+    @Prop() block: boolean = false;
 
     render() {
         return (
-            <button type={this.type} class="btn">
+            <button type={this.type} class={{ block: this.block }}>
                 <slot></slot>
             </button>
         );

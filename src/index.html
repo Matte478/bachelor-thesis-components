@@ -26,16 +26,22 @@
 
 </head>
 <body>
-    <obd-input label="heslo" type="password" value="asd"></obd-input>
+    <!-- <obd-input label="heslo" type="password" value="asd"></obd-input> -->
 
-  <!-- <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> -->
-
-  <div style="width: 500px; margin: 50px 0;">
-    <obd-card card-title="title" card-subtitle="subtitle">
-        test
+    <div style="width: 500px; margin: 50px 0;">
+        <obd-card card-title="title" card-subtitle="subtitle">
+            test <i class="icofont-rounded-double-left"></i> 
+            <obd-button type="submit" block>Prihlásiť</obd-button>
+        </obd-card>
         <obd-button type="submit">Prihlásiť</obd-button>
-    </obd-card>
-  </div>
+    </div>
+
+    <obd-modal modal-title="Toto je title" modal-subtitle="A toto subtitle" active>
+        <div slot="controls">
+            <obd-button type="submit">Prihlásiť</obd-button>
+        </div>
+        Modal test
+    </obd-modal>
 
 </body>
 </html>

@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property              | Attribute       | Description | Type      | Default     |
-| --------------------- | --------------- | ----------- | --------- | ----------- |
-| `active` _(required)_ | `active`        |             | `boolean` | `undefined` |
-| `cardSubtitle`        | `card-subtitle` |             | `string`  | `undefined` |
-| `cardTitle`           | `card-title`    |             | `string`  | `undefined` |
+| Property        | Attribute        | Description | Type      | Default     |
+| --------------- | ---------------- | ----------- | --------- | ----------- |
+| `active`        | `active`         |             | `boolean` | `false`     |
+| `modalSubtitle` | `modal-subtitle` |             | `string`  | `undefined` |
+| `modalTitle`    | `modal-title`    |             | `string`  | `undefined` |
 
 
 ## Events
