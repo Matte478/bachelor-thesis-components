@@ -1,0 +1,61 @@
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tr {
+        border-bottom: 1px solid $color-border-light;
+
+        &:hover {
+            background-color: rgba($color-primary-3, 0.1);
+        }
+
+        td,
+        th {
+            padding: 15px 5px;
+            display: table-cell;
+            text-align: left;
+            vertical-align: middle;
+            border-radius: 2px;
+
+            &.action {
+                width: 100px;
+                text-align: right;
+                .action__edit,
+                .action__delete {
+                    padding: 8px;
+                    margin-right: 8px;
+                    border-radius: 5px;
+                    border: none;
+                    color: #fff;
+                    transition: all 0.1s ease-in-out;
+                    cursor: pointer;
+
+                    &:last-of-type {
+                    margin-right: 0;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .action__edit {
+                    background-color: $color-primary-1;
+                    
+                    &:hover {
+                        background-color: lighten($color: $color-primary-1, $amount: 10%);
+                    }
+                }
+                .action__delete {
+                    background-color: $color-primary-2;
+
+                    &:hover {
+                        background-color: darken($color: $color-primary-2, $amount: 10%);
+                    }
+                }
+            }
+        }
+    }
+}

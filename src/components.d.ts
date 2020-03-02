@@ -37,6 +37,9 @@ export namespace Components {
     'modalSubtitle': string;
     'modalTitle': string;
   }
+  interface ObdTable {
+    'data': string;
+  }
 }
 
 declare global {
@@ -65,11 +68,18 @@ declare global {
     prototype: HTMLObdModalElement;
     new (): HTMLObdModalElement;
   };
+
+  interface HTMLObdTableElement extends Components.ObdTable, HTMLStencilElement {}
+  var HTMLObdTableElement: {
+    prototype: HTMLObdTableElement;
+    new (): HTMLObdTableElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
     'obd-button': HTMLObdButtonElement;
     'obd-card': HTMLObdCardElement;
     'obd-modal': HTMLObdModalElement;
+    'obd-table': HTMLObdTableElement;
   }
 }
 
@@ -102,12 +112,16 @@ declare namespace LocalJSX {
     'modalTitle'?: string;
     'onClosed'?: (event: CustomEvent<any>) => void;
   }
+  interface ObdTable {
+    'data'?: string;
+  }
 
   interface IntrinsicElements {
     'my-component': MyComponent;
     'obd-button': ObdButton;
     'obd-card': ObdCard;
     'obd-modal': ObdModal;
+    'obd-table': ObdTable;
   }
 }
 
@@ -121,6 +135,7 @@ declare module "@stencil/core" {
       'obd-button': LocalJSX.ObdButton & JSXBase.HTMLAttributes<HTMLObdButtonElement>;
       'obd-card': LocalJSX.ObdCard & JSXBase.HTMLAttributes<HTMLObdCardElement>;
       'obd-modal': LocalJSX.ObdModal & JSXBase.HTMLAttributes<HTMLObdModalElement>;
+      'obd-table': LocalJSX.ObdTable & JSXBase.HTMLAttributes<HTMLObdTableElement>;
     }
   }
 }
