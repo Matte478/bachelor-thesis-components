@@ -7,9 +7,18 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `data`   | `data`    |             | `string` | `undefined` |
+| Property  | Attribute | Description | Type     | Default     |
+| --------- | --------- | ----------- | -------- | ----------- |
+| `actions` | `actions` |             | `string` | `'{}'`      |
+| `columns` | `columns` |             | `string` | `'{}'`      |
+| `data`    | `data`    |             | `string` | `undefined` |
+
+
+## Events
+
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `action` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

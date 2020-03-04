@@ -38,6 +38,8 @@ export namespace Components {
     'modalTitle': string;
   }
   interface ObdTable {
+    'actions': string;
+    'columns': string;
     'data': string;
   }
 }
@@ -113,7 +115,10 @@ declare namespace LocalJSX {
     'onClosed'?: (event: CustomEvent<any>) => void;
   }
   interface ObdTable {
+    'actions'?: string;
+    'columns'?: string;
     'data'?: string;
+    'onAction'?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {

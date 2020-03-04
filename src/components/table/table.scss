@@ -22,8 +22,9 @@ table {
             &.action {
                 width: 100px;
                 text-align: right;
-                .action__edit,
-                .action__delete {
+                .action__btn {
+                // .action__edit,
+                // .action__delete {
                     padding: 8px;
                     margin-right: 8px;
                     border-radius: 5px;
@@ -40,21 +41,27 @@ table {
                         outline: none;
                     }
                 }
-
-                .action__edit {
+                .action__btn {
                     background-color: $color-primary-1;
-                    
+
                     &:hover {
                         background-color: lighten($color: $color-primary-1, $amount: 10%);
                     }
                 }
-                .action__delete {
-                    background-color: $color-primary-2;
+                // .action__edit {
+                //     background-color: $color-primary-1;
+                    
+                //     &:hover {
+                //         background-color: lighten($color: $color-primary-1, $amount: 10%);
+                //     }
+                // }
+                // .action__delete {
+                //     background-color: $color-primary-2;
 
-                    &:hover {
-                        background-color: darken($color: $color-primary-2, $amount: 10%);
-                    }
-                }
+                //     &:hover {
+                //         background-color: darken($color: $color-primary-2, $amount: 10%);
+                //     }
+                // }
             }
         }
     }

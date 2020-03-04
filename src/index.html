@@ -43,7 +43,16 @@
         Modal test
     </obd-modal>
 
-    <obd-table data='[{"name":"Stencil","url":"www.stenciljs.com"},{"name":"Google","url":"www.google.com"}]'></obd-table>
+    <obd-table
+        data='[ 
+            {"name":"Stencil","url":"www.stenciljs.com"},
+            {"name":"Google","url":"www.google.com"}
+        ]'
+        actions='[
+            {"text":"edit", "action":"edit"},
+            {"text":"delete", "action":"delete"}
+        ]'
+    ></obd-table>
 
 </body>
 </html>
