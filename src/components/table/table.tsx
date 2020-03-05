@@ -64,7 +64,8 @@ export class Table {
                     <button 
                         class="action__btn"
                         onClick={() => this.action.emit( {'id': id, 'action': item.action} )}
-                    >{item.text}</button>
+                        style={{'background-color': item.color}}
+                    ><i class={item.icon}></i>{item.text}</button>
                 )}
             </td>
         else
