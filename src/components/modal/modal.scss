@@ -1,8 +1,12 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 * {
     box-sizing: border-box;
 }
 
-@import '../../global/fonts/icofont.scss';
+:host {
+    display: block;
+}
 
 .modal {
     position: relative;
@@ -40,6 +44,11 @@
             outline: none;
             background-color: transparent;
             cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
         }
     }
 

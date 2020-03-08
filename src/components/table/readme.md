@@ -9,8 +9,8 @@
 
 | Property  | Attribute | Description | Type     | Default     |
 | --------- | --------- | ----------- | -------- | ----------- |
-| `actions` | `actions` |             | `string` | `'{}'`      |
-| `columns` | `columns` |             | `string` | `'{}'`      |
+| `actions` | `actions` |             | `string` | `'[]'`      |
+| `columns` | `columns` |             | `string` | `'[]'`      |
 | `data`    | `data`    |             | `string` | `undefined` |
 
 

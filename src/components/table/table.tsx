@@ -7,8 +7,8 @@ import { Component, h, Prop, State, Watch, Event, EventEmitter } from '@stencil/
 })
 export class Table {
     @Prop() data: string;
-    @Prop() actions: string = '{}';
-    @Prop() columns: string = '{}';
+    @Prop() actions: string = '[]';
+    @Prop() columns: string = '[]';
 
     @State() innerData: Array<any>;
     @State() innerActions: Array<any>;
