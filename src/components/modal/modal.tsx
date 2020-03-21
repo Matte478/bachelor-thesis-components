@@ -1,4 +1,4 @@
-import { Component, Prop, Event, h, EventEmitter, Watch, Listen, Host } from '@stencil/core';
+import { Component, Prop, Event, h, EventEmitter, Watch, Listen } from '@stencil/core';
 
 @Component({
   tag: 'obd-modal',

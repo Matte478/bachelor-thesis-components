@@ -37,6 +37,9 @@ export namespace Components {
     'modalSubtitle': string;
     'modalTitle': string;
   }
+  interface ObdScroll {
+    'scrollTo': string;
+  }
   interface ObdTable {
     'actions': string;
     'columns': string;
@@ -71,6 +74,12 @@ declare global {
     new (): HTMLObdModalElement;
   };
 
+  interface HTMLObdScrollElement extends Components.ObdScroll, HTMLStencilElement {}
+  var HTMLObdScrollElement: {
+    prototype: HTMLObdScrollElement;
+    new (): HTMLObdScrollElement;
+  };
+
   interface HTMLObdTableElement extends Components.ObdTable, HTMLStencilElement {}
   var HTMLObdTableElement: {
     prototype: HTMLObdTableElement;
@@ -81,6 +90,7 @@ declare global {
     'obd-button': HTMLObdButtonElement;
     'obd-card': HTMLObdCardElement;
     'obd-modal': HTMLObdModalElement;
+    'obd-scroll': HTMLObdScrollElement;
     'obd-table': HTMLObdTableElement;
   }
 }
@@ -114,6 +124,9 @@ declare namespace LocalJSX {
     'modalTitle'?: string;
     'onClosed'?: (event: CustomEvent<any>) => void;
   }
+  interface ObdScroll {
+    'scrollTo'?: string;
+  }
   interface ObdTable {
     'actions'?: string;
     'columns'?: string;
@@ -126,6 +139,7 @@ declare namespace LocalJSX {
     'obd-button': ObdButton;
     'obd-card': ObdCard;
     'obd-modal': ObdModal;
+    'obd-scroll': ObdScroll;
     'obd-table': ObdTable;
   }
 }
@@ -140,6 +154,7 @@ declare module "@stencil/core" {
       'obd-button': LocalJSX.ObdButton & JSXBase.HTMLAttributes<HTMLObdButtonElement>;
       'obd-card': LocalJSX.ObdCard & JSXBase.HTMLAttributes<HTMLObdCardElement>;
       'obd-modal': LocalJSX.ObdModal & JSXBase.HTMLAttributes<HTMLObdModalElement>;
+      'obd-scroll': LocalJSX.ObdScroll & JSXBase.HTMLAttributes<HTMLObdScrollElement>;
       'obd-table': LocalJSX.ObdTable & JSXBase.HTMLAttributes<HTMLObdTableElement>;
     }
   }
