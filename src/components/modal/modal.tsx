@@ -31,9 +31,12 @@ export class Modal {
         return (
             <div class="modal" style={{ display: this.active ? 'block' : 'none' }}>
                 <header class="modal__header">
-                    <p class="modal__header_title">{this.modalTitle}</p>
-                    <p class="modal__header_subtitle">{this.modalSubtitle}</p>
-                    {/* <button class="modal__header_close" onClick={() => this.disable()}>X</button> */}
+                    <div class="card__header_text">
+                        <p class="modal__header_title">{this.modalTitle}</p>
+                        <p class="modal__header_subtitle">{this.modalSubtitle}</p>
+                    </div>
+                    <slot name="controls" />
+
                     <button class="modal__header_close" onClick={() => this.disable()}>
                         <i class="fas fa-times"></i>
                     </button>
