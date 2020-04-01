@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type     | Default |
-| ---------- | ----------- | ----------- | -------- | ------- |
-| `scrollTo` | `scroll-to` |             | `string` | `''`    |
+| Property | Attribute | Description | Type     | Default |
+| -------- | --------- | ----------- | -------- | ------- |
+| `target` | `target`  |             | `string` | `''`    |
 
 
 ## Dependencies

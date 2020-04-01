@@ -38,7 +38,7 @@ export namespace Components {
     'modalTitle': string;
   }
   interface ObdScroll {
-    'scrollTo': string;
+    'target': string;
   }
   interface ObdTable {
     'actions': string;
@@ -125,7 +125,7 @@ declare namespace LocalJSX {
     'onClosed'?: (event: CustomEvent<any>) => void;
   }
   interface ObdScroll {
-    'scrollTo'?: string;
+    'target'?: string;
   }
   interface ObdTable {
     'actions'?: string;

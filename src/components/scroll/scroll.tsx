@@ -6,14 +6,14 @@ import { Component, h, Prop, Listen } from '@stencil/core';
   shadow: true
 })
 export class Scroll {
-    @Prop() scrollTo: string = '';
+    @Prop() target: string = '';
 
     @Listen('click', { capture: true })
     handleClick() {
-        let target = document.getElementById(this.scrollTo);
+        let target = document.getElementById(this.target);
         
         if (target) {
-            this.animate(document.scrollingElement || document.documentElement, "scrollTop", "", 0, target.offsetTop, 500, true);
+            this.animate(document.scrollingElement || document.documentElement, "scrollTop", "", 0, target.offsetTop+68, 500, true);
         }
     }
 
