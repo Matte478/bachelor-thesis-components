@@ -44,6 +44,7 @@ export namespace Components {
     'actions': string;
     'columns': string;
     'data': string;
+    'layout': string;
   }
 }
 
@@ -131,6 +132,7 @@ declare namespace LocalJSX {
     'actions'?: string;
     'columns'?: string;
     'data'?: string;
+    'layout'?: string;
     'onAction'?: (event: CustomEvent<any>) => void;
   }
 

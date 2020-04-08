@@ -12,6 +12,7 @@
 | `actions` | `actions` |             | `string` | `'[]'`      |
 | `columns` | `columns` |             | `string` | `'[]'`      |
 | `data`    | `data`    |             | `string` | `undefined` |
+| `layout`  | `layout`  |             | `string` | `'inherit'` |
 
 
 ## Events
