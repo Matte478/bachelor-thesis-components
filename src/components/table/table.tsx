@@ -56,8 +56,8 @@ export class Table {
 
             td += item[column.key]
 
-            if (typeof column.sufix != 'undefined')
-                td += column.sufix
+            if (typeof column.suffix != 'undefined')
+                td += column.suffix
 
             arr.push(td)
         })
