@@ -28,6 +28,9 @@ export namespace Components {
     'block': boolean;
     'type': string;
   }
+  interface ObdButtonArrow {
+    'right': boolean;
+  }
   interface ObdCard {
     'cardSubtitle': string;
     'cardTitle': string;
@@ -68,6 +71,12 @@ declare global {
     new (): HTMLObdButtonElement;
   };
 
+  interface HTMLObdButtonArrowElement extends Components.ObdButtonArrow, HTMLStencilElement {}
+  var HTMLObdButtonArrowElement: {
+    prototype: HTMLObdButtonArrowElement;
+    new (): HTMLObdButtonArrowElement;
+  };
+
   interface HTMLObdCardElement extends Components.ObdCard, HTMLStencilElement {}
   var HTMLObdCardElement: {
     prototype: HTMLObdCardElement;
@@ -100,6 +109,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
     'obd-button': HTMLObdButtonElement;
+    'obd-button-arrow': HTMLObdButtonArrowElement;
     'obd-card': HTMLObdCardElement;
     'obd-modal': HTMLObdModalElement;
     'obd-page-not-found': HTMLObdPageNotFoundElement;
@@ -126,6 +136,9 @@ declare namespace LocalJSX {
   interface ObdButton {
     'block'?: boolean;
     'type'?: string;
+  }
+  interface ObdButtonArrow {
+    'right'?: boolean;
   }
   interface ObdCard {
     'cardSubtitle'?: string;
@@ -156,6 +169,7 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'my-component': MyComponent;
     'obd-button': ObdButton;
+    'obd-button-arrow': ObdButtonArrow;
     'obd-card': ObdCard;
     'obd-modal': ObdModal;
     'obd-page-not-found': ObdPageNotFound;
@@ -172,6 +186,7 @@ declare module "@stencil/core" {
     interface IntrinsicElements {
       'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
       'obd-button': LocalJSX.ObdButton & JSXBase.HTMLAttributes<HTMLObdButtonElement>;
+      'obd-button-arrow': LocalJSX.ObdButtonArrow & JSXBase.HTMLAttributes<HTMLObdButtonArrowElement>;
       'obd-card': LocalJSX.ObdCard & JSXBase.HTMLAttributes<HTMLObdCardElement>;
       'obd-modal': LocalJSX.ObdModal & JSXBase.HTMLAttributes<HTMLObdModalElement>;
       'obd-page-not-found': LocalJSX.ObdPageNotFound & JSXBase.HTMLAttributes<HTMLObdPageNotFoundElement>;

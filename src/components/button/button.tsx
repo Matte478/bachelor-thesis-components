@@ -9,7 +9,7 @@ import { Component, Prop, h } from '@stencil/core'
 export class Button {
 
     @Prop() type: string
-    @Prop() block: boolean = false;
+    @Prop() block: boolean = false
 
     render() {
         return (

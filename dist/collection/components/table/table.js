@@ -1,6 +1,7 @@
 import { h } from "@stencil/core";
 export class Table {
     constructor() {
+        this.data = '{}';
         this.layout = 'inherit';
         this.actions = '[]';
         this.columns = '[]';
@@ -30,7 +31,10 @@ export class Table {
             let td = '';
             if (typeof column.prefix !== 'undefined')
                 td += column.prefix;
-            td += item[column.key];
+            if (typeof item[column.key] !== 'undefined')
+                td += item[column.key];
+            else
+                td += '';
             if (typeof column.suffix != 'undefined')
                 td += column.suffix;
             arr.push(td);
@@ -78,7 +82,8 @@ export class Table {
                 "text": ""
             },
             "attribute": "data",
-            "reflect": false
+            "reflect": false,
+            "defaultValue": "'{}'"
         },
         "layout": {
             "type": "string",

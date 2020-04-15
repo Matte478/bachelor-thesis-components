@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const core = require('./core-51c374c3.js');
+const core = require('./core-5439e6c7.js');
 
 const Scroll = class {
     constructor(hostRef) {

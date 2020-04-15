@@ -1,0 +1,28 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+:host {
+    display: inline-block;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: $color-primary-3;
+    border-radius: 50%;
+    @include font-size(35, 35);
+    border: none;
+    outline: none;
+    color: $color-white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    .fas {
+        display: block;
+    }
+
+    &.right {
+        transform: rotate(180deg);
+    }
+}

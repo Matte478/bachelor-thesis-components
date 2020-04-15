@@ -1,4 +1,4 @@
-import { r as registerInstance, h } from './core-b64fa00c.js';
+import { r as registerInstance, h } from './core-1dbfc232.js';
 
 const Scroll = class {
     constructor(hostRef) {

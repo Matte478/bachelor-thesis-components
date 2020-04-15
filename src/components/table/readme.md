@@ -11,7 +11,7 @@
 | --------- | --------- | ----------- | -------- | ----------- |
 | `actions` | `actions` |             | `string` | `'[]'`      |
 | `columns` | `columns` |             | `string` | `'[]'`      |
-| `data`    | `data`    |             | `string` | `undefined` |
+| `data`    | `data`    |             | `string` | `'{}'`      |
 | `layout`  | `layout`  |             | `string` | `'inherit'` |
 
 

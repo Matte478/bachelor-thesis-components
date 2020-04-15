@@ -6,7 +6,7 @@ import { Component, h, Prop, State, Watch, Event, EventEmitter } from '@stencil/
     shadow: true
 })
 export class Table {
-    @Prop() data: string
+    @Prop() data: string = '{}';
     @Prop() layout: string = 'inherit';
     @Prop() actions: string = '[]';
     @Prop() columns: string = '[]';
@@ -54,7 +54,10 @@ export class Table {
             if (typeof column.prefix !== 'undefined')
                 td += column.prefix
 
-            td += item[column.key]
+            if (typeof item[column.key] !== 'undefined')
+                td += item[column.key]
+            else
+                td += ''
 
             if (typeof column.suffix != 'undefined')
                 td += column.suffix
