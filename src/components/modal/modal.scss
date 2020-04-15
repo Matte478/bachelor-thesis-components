@@ -10,6 +10,10 @@
     z-index: 999;
     background: rgba($color: $color-primary-1, $alpha: 0.5);
     overflow: scroll;
+
+    * {
+        box-sizing: border-box;
+    }
 }
 
 .wrapper {
@@ -20,7 +24,6 @@
     width: 100%;
     min-height: 100%;
     left: 0;
-    min-height: 100%;
 }
 
 .modal {

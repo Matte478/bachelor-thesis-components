@@ -19,6 +19,9 @@
   background: rgba(45, 64, 89, 0.5);
   overflow: scroll;
 }
+:host * {
+  box-sizing: border-box;
+}
 
 .wrapper {
   position: absolute;
@@ -28,7 +31,6 @@
   width: 100%;
   min-height: 100%;
   left: 0;
-  min-height: 100%;
 }
 
 .modal {

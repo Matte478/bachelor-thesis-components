@@ -34,11 +34,11 @@
             color: $color-text;
             @include font-size(14);
             letter-spacing: 0;
-            margin-bottom: 0;  
+            margin-bottom: 0;
         }
     }
 
     &__body {
-        padding: 30px
+        padding: 30px;
     }
 }
