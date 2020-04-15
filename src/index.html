@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -7,17 +8,20 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&display=swap&subset=latin-ext');
+
     * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
     }
+
     html {
-        font-size: 62.5%;
+      font-size: 62.5%;
     }
+
     body {
-        font-size: 1.4rem;
+      font-size: 1.4rem;
     }
   </style>
 
@@ -25,43 +29,64 @@
   <script nomodule src="/build/obedovac-components.js"></script>
 
 </head>
+
 <body>
-    <!-- <obd-input label="heslo" type="password" value="asd"></obd-input> -->
-    <!-- <obd-button-arrow right></obd-button-arrow> -->
-    <!-- <my-component></my-component> -->
+  <!-- <obd-input label="heslo" type="password" value="asd"></obd-input> -->
+  <!-- <obd-button-arrow right></obd-button-arrow> -->
+  <!-- <my-component></my-component> -->
 
-    <obd-table-menu></obd-table-menu>
+  <!-- <obd-table-menu></obd-table-menu> -->
 
-    <div style="width: 500px; margin: 50px 0;">
-        <obd-card card-title="title" card-subtitle="subtitle">
-            test <i class="icofont-rounded-double-left"></i> 
-            <obd-button type="submit" block>Prihlásiť</obd-button>
-        </obd-card>
-        <obd-button type="submit">Prihlásiť</obd-button>
+  <div style="width: 500px; margin: 50px 0;">
+    <obd-card card-title="title" card-subtitle="subtitle">
+      test <i class="icofont-rounded-double-left"></i>
+
+    </obd-card>
+  </div>
+
+  <obd-button type="submit" id="open-modal">Prihlásiť</obd-button>
+
+  <obd-modal modal-title="Toto je title" modal-subtitle="A toto subtitle" id="modal">
+    <div slot="controls">
+      <obd-button type="submit">Prihlásiť</obd-button>
     </div>
+    <obd-card card-title="title" card-subtitle="subtitle">
+      test <i class="icofont-rounded-double-left"></i>
 
-    <obd-modal modal-title="Toto je title" modal-subtitle="A toto subtitle" active>
-        <div slot="controls">
-            <obd-button type="submit">Prihlásiť</obd-button>
-        </div>
-        Modal test
-    </obd-modal>
+    </obd-card>
+    <obd-card card-title="title" card-subtitle="subtitle">
+      test <i class="icofont-rounded-double-left"></i>
 
-    <obd-table
-        data='[ 
+    </obd-card>
+    <obd-card card-title="title" card-subtitle="subtitle">
+      test <i class="icofont-rounded-double-left"></i>
+
+    </obd-card>
+    <obd-card card-title="title" card-subtitle="subtitle">
+      test <i class="icofont-rounded-double-left"></i>
+
+    </obd-card>
+    Modal test
+  </obd-modal>
+
+  <obd-table data='[ 
             {"name":"Stencil","url":"www.stenciljs.com"},
             {"name":"Google","url":"www.google.com"}
-        ]'
-        columns='[
+        ]' columns='[
             
-        ]'
-        actions='[
+        ]' actions='[
             {"text":"edit", "action":"edit"},
             {"text":"delete", "action":"delete"}
-        ]'
-    ></obd-table>
+        ]'></obd-table>
 
-    <obd-page-not-found />
+  <obd-page-not-found />
 
+
+  <script>
+    document.getElementById('open-modal').addEventListener('click', function () {
+      document.getElementById('modal').setAttribute('active', true);
+    });
+  </script>
 </body>
+
 </html>

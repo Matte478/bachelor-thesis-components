@@ -3,10 +3,12 @@ export declare class Modal {
     modalTitle: string;
     modalSubtitle: string;
     active: boolean;
+    maxWidth: string;
     closed: EventEmitter;
     watchHandler(newValue: boolean): void;
     handleKeyup(e: any): void;
     render(): any;
     componentDidLoad(): void;
-    disable(): void;
+    private disable;
+    private open;
 }

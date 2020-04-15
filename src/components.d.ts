@@ -10,20 +10,6 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
   interface ObdButton {
     'block': boolean;
     'type': string;
@@ -37,6 +23,7 @@ export namespace Components {
   }
   interface ObdModal {
     'active': boolean;
+    'maxWidth': string;
     'modalSubtitle': string;
     'modalTitle': string;
   }
@@ -62,12 +49,6 @@ export namespace Components {
 
 declare global {
 
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
 
   interface HTMLObdButtonElement extends Components.ObdButton, HTMLStencilElement {}
   var HTMLObdButtonElement: {
@@ -117,7 +98,6 @@ declare global {
     new (): HTMLObdTableMenuElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
     'obd-button': HTMLObdButtonElement;
     'obd-button-arrow': HTMLObdButtonArrowElement;
     'obd-card': HTMLObdCardElement;
@@ -130,20 +110,6 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
   interface ObdButton {
     'block'?: boolean;
     'type'?: string;
@@ -157,6 +123,7 @@ declare namespace LocalJSX {
   }
   interface ObdModal {
     'active'?: boolean;
+    'maxWidth'?: string;
     'modalSubtitle'?: string;
     'modalTitle'?: string;
     'onClosed'?: (event: CustomEvent<any>) => void;
@@ -184,7 +151,6 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
     'obd-button': ObdButton;
     'obd-button-arrow': ObdButtonArrow;
     'obd-card': ObdCard;
@@ -202,7 +168,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
       'obd-button': LocalJSX.ObdButton & JSXBase.HTMLAttributes<HTMLObdButtonElement>;
       'obd-button-arrow': LocalJSX.ObdButtonArrow & JSXBase.HTMLAttributes<HTMLObdButtonArrowElement>;
       'obd-card': LocalJSX.ObdCard & JSXBase.HTMLAttributes<HTMLObdCardElement>;
