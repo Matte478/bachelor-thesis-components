@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&display=swap&subset=latin-ext");
+* {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+:host {
+  display: inline-block;
+  text-align: center;
+}
+
+.emoji {
+  margin-bottom: 0.7em;
+  font-size: 110px;
+  font-size: 11rem;
+  line-height: 1em;
+  color: #4e4e4e;
+}
+
+.status {
+  margin-bottom: 0.1em;
+  font-size: 60px;
+  font-size: 6rem;
+  line-height: 1em;
+  color: #f07b3f;
+}
+
+.message {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 1.6em;
+  color: #4e4e4e;
+}

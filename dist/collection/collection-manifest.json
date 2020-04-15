@@ -1,0 +1,18 @@
+{
+  "entries": [
+    "components/button/button.js",
+    "components/card/card.js",
+    "components/modal/modal.js",
+    "components/my-component/my-component.js",
+    "components/scroll/scroll.js",
+    "components/page-not-found/page-not-found.js",
+    "components/table/table.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.4",
+    "typescriptVersion": "3.7.2"
+  },
+  "collections": [],
+  "bundles": []
+}
