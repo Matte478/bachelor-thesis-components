@@ -54,6 +54,10 @@ export namespace Components {
     'data': string;
     'layout': string;
   }
+  interface ObdTableMenu {
+    'meals': string;
+    'message': string;
+  }
 }
 
 declare global {
@@ -106,6 +110,12 @@ declare global {
     prototype: HTMLObdTableElement;
     new (): HTMLObdTableElement;
   };
+
+  interface HTMLObdTableMenuElement extends Components.ObdTableMenu, HTMLStencilElement {}
+  var HTMLObdTableMenuElement: {
+    prototype: HTMLObdTableMenuElement;
+    new (): HTMLObdTableMenuElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
     'obd-button': HTMLObdButtonElement;
@@ -115,6 +125,7 @@ declare global {
     'obd-page-not-found': HTMLObdPageNotFoundElement;
     'obd-scroll': HTMLObdScrollElement;
     'obd-table': HTMLObdTableElement;
+    'obd-table-menu': HTMLObdTableMenuElement;
   }
 }
 
@@ -165,6 +176,12 @@ declare namespace LocalJSX {
     'layout'?: string;
     'onAction'?: (event: CustomEvent<any>) => void;
   }
+  interface ObdTableMenu {
+    'meals'?: string;
+    'message'?: string;
+    'onDelete'?: (event: CustomEvent<any>) => void;
+    'onEdit'?: (event: CustomEvent<any>) => void;
+  }
 
   interface IntrinsicElements {
     'my-component': MyComponent;
@@ -175,6 +192,7 @@ declare namespace LocalJSX {
     'obd-page-not-found': ObdPageNotFound;
     'obd-scroll': ObdScroll;
     'obd-table': ObdTable;
+    'obd-table-menu': ObdTableMenu;
   }
 }
 
@@ -192,6 +210,7 @@ declare module "@stencil/core" {
       'obd-page-not-found': LocalJSX.ObdPageNotFound & JSXBase.HTMLAttributes<HTMLObdPageNotFoundElement>;
       'obd-scroll': LocalJSX.ObdScroll & JSXBase.HTMLAttributes<HTMLObdScrollElement>;
       'obd-table': LocalJSX.ObdTable & JSXBase.HTMLAttributes<HTMLObdTableElement>;
+      'obd-table-menu': LocalJSX.ObdTableMenu & JSXBase.HTMLAttributes<HTMLObdTableMenuElement>;
     }
   }
 }
