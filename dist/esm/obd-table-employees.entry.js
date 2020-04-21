@@ -1,27 +1,32 @@
 import { r as registerInstance, c as createEvent, h } from './core-1dbfc232.js';
 
-const TableMenu = class {
+const TableEmployee = class {
     constructor(hostRef) {
         registerInstance(this, hostRef);
-        this.meals = '[]';
+        this.employees = '[]';
         this.columns = [
             {
-                key: 'meal',
-                text: 'Názov jedla',
+                key: 'name',
+                text: 'Meno',
             },
             {
-                key: 'price',
-                text: 'Cena',
-                suffix: '€'
+                key: 'email',
+                text: 'Email',
+            },
+            {
+                key: 'type-of-employment',
+                text: 'Druh pracovného pomeru',
             },
         ];
         this.tableActions = [
             {
+                text: '',
                 action: 'edit',
                 icon: 'fas fa-edit',
                 color: '#2d4059',
             },
             {
+                text: '',
                 action: 'delete',
                 icon: 'fas fa-trash-alt',
                 color: '#ea5455',
@@ -43,9 +48,9 @@ const TableMenu = class {
         }
     }
     render() {
-        return (h("obd-table", { data: this.meals, columns: JSON.stringify(this.columns), actions: JSON.stringify(this.tableActions), onAction: e => this.action(e) }));
+        return (h("obd-table", { data: this.employees, columns: JSON.stringify(this.columns), actions: JSON.stringify(this.tableActions), onAction: e => this.action(e) }));
     }
     static get style() { return ":host{display:block}"; }
 };
 
-export { TableMenu as obd_table_menu };
+export { TableEmployee as obd_table_employees };

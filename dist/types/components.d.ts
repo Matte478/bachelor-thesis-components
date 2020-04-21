@@ -41,6 +41,9 @@ export namespace Components {
     'data': string;
     'layout': string;
   }
+  interface ObdTableEmployees {
+    'employees': string;
+  }
   interface ObdTableMenu {
     'meals': string;
   }
@@ -91,6 +94,12 @@ declare global {
     new (): HTMLObdTableElement;
   };
 
+  interface HTMLObdTableEmployeesElement extends Components.ObdTableEmployees, HTMLStencilElement {}
+  var HTMLObdTableEmployeesElement: {
+    prototype: HTMLObdTableEmployeesElement;
+    new (): HTMLObdTableEmployeesElement;
+  };
+
   interface HTMLObdTableMenuElement extends Components.ObdTableMenu, HTMLStencilElement {}
   var HTMLObdTableMenuElement: {
     prototype: HTMLObdTableMenuElement;
@@ -104,6 +113,7 @@ declare global {
     'obd-page-not-found': HTMLObdPageNotFoundElement;
     'obd-scroll': HTMLObdScrollElement;
     'obd-table': HTMLObdTableElement;
+    'obd-table-employees': HTMLObdTableEmployeesElement;
     'obd-table-menu': HTMLObdTableMenuElement;
   }
 }
@@ -142,6 +152,11 @@ declare namespace LocalJSX {
     'layout'?: string;
     'onAction'?: (event: CustomEvent<any>) => void;
   }
+  interface ObdTableEmployees {
+    'employees'?: string;
+    'onDelete'?: (event: CustomEvent<any>) => void;
+    'onEdit'?: (event: CustomEvent<any>) => void;
+  }
   interface ObdTableMenu {
     'meals'?: string;
     'onDelete'?: (event: CustomEvent<any>) => void;
@@ -156,6 +171,7 @@ declare namespace LocalJSX {
     'obd-page-not-found': ObdPageNotFound;
     'obd-scroll': ObdScroll;
     'obd-table': ObdTable;
+    'obd-table-employees': ObdTableEmployees;
     'obd-table-menu': ObdTableMenu;
   }
 }
@@ -173,6 +189,7 @@ declare module "@stencil/core" {
       'obd-page-not-found': LocalJSX.ObdPageNotFound & JSXBase.HTMLAttributes<HTMLObdPageNotFoundElement>;
       'obd-scroll': LocalJSX.ObdScroll & JSXBase.HTMLAttributes<HTMLObdScrollElement>;
       'obd-table': LocalJSX.ObdTable & JSXBase.HTMLAttributes<HTMLObdTableElement>;
+      'obd-table-employees': LocalJSX.ObdTableEmployees & JSXBase.HTMLAttributes<HTMLObdTableEmployeesElement>;
       'obd-table-menu': LocalJSX.ObdTableMenu & JSXBase.HTMLAttributes<HTMLObdTableMenuElement>;
     }
   }

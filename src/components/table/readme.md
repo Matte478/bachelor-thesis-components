@@ -26,11 +26,13 @@
 
 ### Used by
 
+ - [obd-table-employees](../table-employee)
  - [obd-table-menu](../table-menu)
 
 ### Graph
 ```mermaid
 graph TD;
+  obd-table-employees --> obd-table
   obd-table-menu --> obd-table
   style obd-table fill:#f9f,stroke:#333,stroke-width:4px
 ```

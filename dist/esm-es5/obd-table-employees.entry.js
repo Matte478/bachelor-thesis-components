@@ -1,26 +1,31 @@
 import { r as registerInstance, c as createEvent, h } from './core-1dbfc232.js';
-var TableMenu = /** @class */ (function () {
-    function TableMenu(hostRef) {
+var TableEmployee = /** @class */ (function () {
+    function TableEmployee(hostRef) {
         registerInstance(this, hostRef);
-        this.meals = '[]';
+        this.employees = '[]';
         this.columns = [
             {
-                key: 'meal',
-                text: 'Názov jedla',
+                key: 'name',
+                text: 'Meno',
             },
             {
-                key: 'price',
-                text: 'Cena',
-                suffix: '€'
+                key: 'email',
+                text: 'Email',
+            },
+            {
+                key: 'type-of-employment',
+                text: 'Druh pracovného pomeru',
             },
         ];
         this.tableActions = [
             {
+                text: '',
                 action: 'edit',
                 icon: 'fas fa-edit',
                 color: '#2d4059',
             },
             {
+                text: '',
                 action: 'delete',
                 icon: 'fas fa-trash-alt',
                 color: '#ea5455',
@@ -29,7 +34,7 @@ var TableMenu = /** @class */ (function () {
         this.edit = createEvent(this, "edit", 7);
         this.delete = createEvent(this, "delete", 7);
     }
-    TableMenu.prototype.action = function (e) {
+    TableEmployee.prototype.action = function (e) {
         var action = e.detail.action;
         var id = e.detail.id;
         switch (action) {
@@ -41,15 +46,15 @@ var TableMenu = /** @class */ (function () {
                 break;
         }
     };
-    TableMenu.prototype.render = function () {
+    TableEmployee.prototype.render = function () {
         var _this = this;
-        return (h("obd-table", { data: this.meals, columns: JSON.stringify(this.columns), actions: JSON.stringify(this.tableActions), onAction: function (e) { return _this.action(e); } }));
+        return (h("obd-table", { data: this.employees, columns: JSON.stringify(this.columns), actions: JSON.stringify(this.tableActions), onAction: function (e) { return _this.action(e); } }));
     };
-    Object.defineProperty(TableMenu, "style", {
+    Object.defineProperty(TableEmployee, "style", {
         get: function () { return ":host{display:block}"; },
         enumerable: true,
         configurable: true
     });
-    return TableMenu;
+    return TableEmployee;
 }());
-export { TableMenu as obd_table_menu };
+export { TableEmployee as obd_table_employees };

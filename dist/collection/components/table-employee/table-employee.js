@@ -1,25 +1,30 @@
 import { h } from "@stencil/core";
-export class TableMenu {
+export class TableEmployee {
     constructor() {
-        this.meals = '[]';
+        this.employees = '[]';
         this.columns = [
             {
-                key: 'meal',
-                text: 'Názov jedla',
+                key: 'name',
+                text: 'Meno',
             },
             {
-                key: 'price',
-                text: 'Cena',
-                suffix: '€'
+                key: 'email',
+                text: 'Email',
+            },
+            {
+                key: 'type-of-employment',
+                text: 'Druh pracovného pomeru',
             },
         ];
         this.tableActions = [
             {
+                text: '',
                 action: 'edit',
                 icon: 'fas fa-edit',
                 color: '#2d4059',
             },
             {
+                text: '',
                 action: 'delete',
                 icon: 'fas fa-trash-alt',
                 color: '#ea5455',
@@ -39,18 +44,18 @@ export class TableMenu {
         }
     }
     render() {
-        return (h("obd-table", { data: this.meals, columns: JSON.stringify(this.columns), actions: JSON.stringify(this.tableActions), onAction: e => this.action(e) }));
+        return (h("obd-table", { data: this.employees, columns: JSON.stringify(this.columns), actions: JSON.stringify(this.tableActions), onAction: e => this.action(e) }));
     }
-    static get is() { return "obd-table-menu"; }
+    static get is() { return "obd-table-employees"; }
     static get encapsulation() { return "shadow"; }
     static get originalStyleUrls() { return {
-        "$": ["table-menu.css"]
+        "$": ["table-employee.css"]
     }; }
     static get styleUrls() { return {
-        "$": ["table-menu.css"]
+        "$": ["table-employee.css"]
     }; }
     static get properties() { return {
-        "meals": {
+        "employees": {
             "type": "string",
             "mutable": false,
             "complexType": {
@@ -64,7 +69,7 @@ export class TableMenu {
                 "tags": [],
                 "text": ""
             },
-            "attribute": "meals",
+            "attribute": "employees",
             "reflect": false,
             "defaultValue": "'[]'"
         }
