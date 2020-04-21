@@ -6,8 +6,7 @@ import { Component, h, Prop, Event, EventEmitter } from '@stencil/core'
     shadow: true
 })
 export class TableMenu {
-    @Prop() meals: string = '[{"id":35,"meal":"test","price":"12.00","menu_id":4}]'
-    @Prop() message: string = 'Táto stránka neexistuje.'
+    @Prop() meals: string = '[]'
 
     @Event() edit: EventEmitter
     @Event() delete: EventEmitter
@@ -63,5 +62,4 @@ export class TableMenu {
             </div>
         )
     }
-
 }

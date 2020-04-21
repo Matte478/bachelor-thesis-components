@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     | Default                                                   |
-| --------- | --------- | ----------- | -------- | --------------------------------------------------------- |
-| `meals`   | `meals`   |             | `string` | `'[{"id":35,"meal":"test","price":"12.00","menu_id":4}]'` |
-| `message` | `message` |             | `string` | `'Táto stránka neexistuje.'`                              |
+| Property | Attribute | Description | Type     | Default |
+| -------- | --------- | ----------- | -------- | ------- |
+| `meals`  | `meals`   |             | `string` | `'[]'`  |
 
 
 ## Events

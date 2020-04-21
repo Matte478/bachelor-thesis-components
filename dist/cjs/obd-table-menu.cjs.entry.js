@@ -7,8 +7,7 @@ const core = require('./core-5439e6c7.js');
 const TableMenu = class {
     constructor(hostRef) {
         core.registerInstance(this, hostRef);
-        this.meals = '[{"id":35,"meal":"test","price":"12.00","menu_id":4}]';
-        this.message = 'Táto stránka neexistuje.';
+        this.meals = '[]';
         this.columns = [
             {
                 key: 'meal',

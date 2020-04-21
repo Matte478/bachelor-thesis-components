@@ -1,8 +1,7 @@
 import { h } from "@stencil/core";
 export class TableMenu {
     constructor() {
-        this.meals = '[{"id":35,"meal":"test","price":"12.00","menu_id":4}]';
-        this.message = 'Táto stránka neexistuje.';
+        this.meals = '[]';
         this.columns = [
             {
                 key: 'meal',
@@ -68,25 +67,7 @@ export class TableMenu {
             },
             "attribute": "meals",
             "reflect": false,
-            "defaultValue": "'[{\"id\":35,\"meal\":\"test\",\"price\":\"12.00\",\"menu_id\":4}]'"
-        },
-        "message": {
-            "type": "string",
-            "mutable": false,
-            "complexType": {
-                "original": "string",
-                "resolved": "string",
-                "references": {}
-            },
-            "required": false,
-            "optional": false,
-            "docs": {
-                "tags": [],
-                "text": ""
-            },
-            "attribute": "message",
-            "reflect": false,
-            "defaultValue": "'T\u00E1to str\u00E1nka neexistuje.'"
+            "defaultValue": "'[]'"
         }
     }; }
     static get events() { return [{

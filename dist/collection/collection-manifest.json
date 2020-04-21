@@ -1,13 +1,13 @@
 {
   "entries": [
-    "components/card/card.js",
-    "components/button/button.js",
+    "components/page-not-found/page-not-found.js",
     "components/modal/modal.js",
     "components/button-arrow/button-arrow.js",
+    "components/button/button.js",
     "components/table/table.js",
-    "components/page-not-found/page-not-found.js",
+    "components/table-menu/table-menu.js",
     "components/scroll/scroll.js",
-    "components/table-menu/table-menu.js"
+    "components/card/card.js"
   ],
   "compiler": {
     "name": "@stencil/core",

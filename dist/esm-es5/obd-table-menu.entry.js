@@ -2,8 +2,7 @@ import { r as registerInstance, c as createEvent, h } from './core-1dbfc232.js';
 var TableMenu = /** @class */ (function () {
     function TableMenu(hostRef) {
         registerInstance(this, hostRef);
-        this.meals = '[{"id":35,"meal":"test","price":"12.00","menu_id":4}]';
-        this.message = 'Táto stránka neexistuje.';
+        this.meals = '[]';
         this.columns = [
             {
                 key: 'meal',

@@ -43,7 +43,6 @@ export namespace Components {
   }
   interface ObdTableMenu {
     'meals': string;
-    'message': string;
   }
 }
 
@@ -145,7 +144,6 @@ declare namespace LocalJSX {
   }
   interface ObdTableMenu {
     'meals'?: string;
-    'message'?: string;
     'onDelete'?: (event: CustomEvent<any>) => void;
     'onEdit'?: (event: CustomEvent<any>) => void;
   }
