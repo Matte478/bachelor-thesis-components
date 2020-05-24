@@ -37,7 +37,7 @@ var Scroll = /** @class */ (function () {
         return (h("obd-button", null, h("slot", null)));
     };
     Object.defineProperty(Scroll, "style", {
-        get: function () { return "\@import url(\"https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&display=swap&subset=latin-ext\");*{font-family:Fira Sans,Helvetica,Arial,sans-serif}:host{display:inline-block}"; },
+        get: function () { return "\@import url(\"https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&display=swap&subset=latin-ext\");:host{display:inline-block}"; },
         enumerable: true,
         configurable: true
     });

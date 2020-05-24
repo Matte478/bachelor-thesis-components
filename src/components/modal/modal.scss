@@ -9,7 +9,7 @@
     left: 0;
     z-index: 999;
     background: rgba($color: $color-primary-1, $alpha: 0.5);
-    overflow: scroll;
+    overflow: auto;
 
     * {
         box-sizing: border-box;

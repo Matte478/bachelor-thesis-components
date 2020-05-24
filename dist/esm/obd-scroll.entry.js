@@ -37,7 +37,7 @@ const Scroll = class {
     render() {
         return (h("obd-button", null, h("slot", null)));
     }
-    static get style() { return "\@import url(\"https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&display=swap&subset=latin-ext\");*{font-family:Fira Sans,Helvetica,Arial,sans-serif}:host{display:inline-block}"; }
+    static get style() { return "\@import url(\"https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&display=swap&subset=latin-ext\");:host{display:inline-block}"; }
 };
 
 export { Scroll as obd_scroll };

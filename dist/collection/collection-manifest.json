@@ -1,13 +1,13 @@
 {
   "entries": [
-    "components/modal/modal.js",
-    "components/button-arrow/button-arrow.js",
     "components/button/button.js",
+    "components/modal/modal.js",
     "components/card/card.js",
+    "components/button-arrow/button-arrow.js",
+    "components/table-menu/table-menu.js",
+    "components/table-employee/table-employee.js",
     "components/page-not-found/page-not-found.js",
     "components/scroll/scroll.js",
-    "components/table-employee/table-employee.js",
-    "components/table-menu/table-menu.js",
     "components/table/table.js"
   ],
   "compiler": {
