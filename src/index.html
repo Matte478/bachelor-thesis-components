@@ -23,6 +23,23 @@
     body {
       font-size: 1.4rem;
     }
+
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    .wrapper {
+      max-width: 1110px;
+      margin: 50px auto;
+    }
+
+    .component {
+      margin-bottom: 50px;
+    }
+
+    .component h3 {
+      margin-bottom: 1em;
+    }
   </style>
 
   <script type="module" src="/build/obedovac-components.esm.js"></script>
@@ -31,57 +48,85 @@
 </head>
 
 <body>
-  <!-- <obd-input label="heslo" type="password" value="asd"></obd-input> -->
-  <!-- <obd-button-arrow right></obd-button-arrow> -->
-  <!-- <my-component></my-component> -->
-
-  <!-- <obd-table-menu></obd-table-menu> -->
-
-  <div style="width: 500px; margin: 50px 0;">
-    <obd-card card-title="title" card-subtitle="subtitle">
-      test <i class="icofont-rounded-double-left"></i>
-
-    </obd-card>
-  </div>
-
-  <obd-button type="submit" id="open-modal">Prihlásiť</obd-button>
-
-  <obd-modal modal-title="Toto je title" modal-subtitle="A toto subtitle" id="modal">
-    <div slot="controls">
-      <obd-button type="submit">Prihlásiť</obd-button>
+  <div class="wrapper">
+    <h1>Obedovač web components</h1>
+    <div class="component">
+      <h3>obd-card</h3>
+      <obd-card card-title="title" card-subtitle="subtitle">
+        CARD EXAMPLE
+      </obd-card>
     </div>
-    <obd-card card-title="title" card-subtitle="subtitle">
-      test <i class="icofont-rounded-double-left"></i>
 
-    </obd-card>
-    <obd-card card-title="title" card-subtitle="subtitle">
-      test <i class="icofont-rounded-double-left"></i>
+    <div class="component">
+      <h3>obd-button</h3>
+      <obd-button type="submit">Button example</obd-button>
+    </div>
 
-    </obd-card>
-    <obd-card card-title="title" card-subtitle="subtitle">
-      test <i class="icofont-rounded-double-left"></i>
+    <div class="component">
+      <h3>button-arrow</h3>
+      <obd-button-arrow />
+    </div>
 
-    </obd-card>
-    <obd-card card-title="title" card-subtitle="subtitle">
-      test <i class="icofont-rounded-double-left"></i>
+    <div class="component">
+      <h3>obd-scroll</h3>
+      <obd-scroll type="submit" target="page-404">Scroll to page-not-found component</obd-button>
+    </div>
 
-    </obd-card>
-    Modal test
-  </obd-modal>
+    <div class="component">
+      <h3>obd-modal</h3>
+      <obd-button id="open-modal">Open modal</obd-button>
 
-  <obd-table data='[ 
-            {"name":"Stencil","url":"www.stenciljs.com"},
-            {"name":"Google","url":"www.google.com"}
+      <obd-modal modal-title="Title" modal-subtitle="Subtitle" id="modal">
+        <div slot="controls">
+          <obd-button type="submit">Slot button</obd-button>
+        </div>
+        <obd-card card-title="title" card-subtitle="subtitle">
+          obd-card component
+        </obd-card>
+      </obd-modal>
+    </div>
+
+    <div class="component">
+      <h3>obd-table</h3>
+      <obd-table data='[ 
+          {"name":"Stencil","url":"www.stenciljs.com"},
+          {"name":"Google","url":"www.google.com"}
         ]' columns='[
-            
+          {"key":"name","text":"Name"},
+          {"key":"url","text":"Url"}
         ]' actions='[
-            {"text":"edit", "action":"edit"},
-            {"text":"delete", "action":"delete"}
-        ]'></obd-table>
+          {"text":"Action", "action":"action"}
+        ]'
+      />
+    </div>
 
-  <obd-page-not-found />
+    <div class="component">
+      <h3>obd-table-menu</h3>
+      <obd-table-menu meals='[
+        {"id":1,"meal":"Jedlo 1","price":"7.45"},
+        {"id":2,"meal":"Jedlo 2","price":"8.60"},
+        {"id":3,"meal":"Jedlo 3","price":"8.50"},
+        {"id":4,"meal":"Jedlo 4","price":"7.99"}]'
+      />
+    </div>
 
+    <div class="component">
+      <h3>obd-table-employees</h3>
+      <obd-table-employees
+        employees='[
+        {"name":"Dávid Špak","email":"david@obedovac.sk","type-of-employment_id":null,"type-of-employment":"-","id":1},
+        {"name":"Ondrej Baláž","email":"ondrej@obedovac.sk","type-of-employment_id":4,"type-of-employment":"Živnostník","id":5},
+        {"name":"Martin Kováč","email":"martin@obedovac.sk","type-of-employment_id":3,"type-of-employment":"TPP","id":7},
+        {"name":"Peter Novák","email":"peter@obedovac.sk","type-of-employment_id":8,"type-of-employment":"Brigádnik","id":11}]'
+      />
+    </div>
 
+    <div class="component">
+      <h3>obd-page-not-found</h3>
+      <obd-page-not-found id="page-404" />
+    </div>
+
+  </div>
   <script>
     document.getElementById('open-modal').addEventListener('click', function () {
       document.getElementById('modal').setAttribute('active', true);
